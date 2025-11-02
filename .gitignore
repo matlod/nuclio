@@ -360,3 +360,49 @@ debug.test
 
 nuclio-docker-images-*.tar.gz
 .release-info.txt
+
+# Development workspace specific additions
+# uv package manager
+.uv-cache/
+
+# Local virtual environments
+.venv/
+
+# uv lock file (if generated)
+uv.lock
+
+# Development workspace files
+src/nuclio_dev_workspace/__pycache__/
+src/nuclio_dev_workspace/*.pyc
+src/nuclio_dev_workspace/*.pyo
+
+# Test outputs and coverage
+test-reports/
+test-results/
+.coverage
+htmlcov/
+
+# Local configuration
+.env.local
+.env.development
+.env.production
+
+# IDE specific workspace files
+.vscode/settings.json
+.vscode/launch.json
+.vscode/extensions.json
+
+# Local registry data (if any)
+registry-data/
+
+# Local development logs
+*.log
+*.pid
+
+# Temporary files from function executor testing
+temp-*/
+.tmp/
+
+# Performance profiling
+*.prof
+*.profile
