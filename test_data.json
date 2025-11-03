@@ -1,0 +1,6 @@
+{
+  "function": "def process_data(items):\n    filtered = [item for item in items if item > 5]\n    return {\n        \"original_count\": len(items),\n        \"filtered_count\": len(filtered),\n        \"filtered_items\": filtered\n    }",
+  "params": {
+    "items": [1, 2, 3, 8, 12, 4, 15, 6, 9, 20]
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "function": "def calculate_and_show(x, y):\n    print(f\"Calculating {x} + {y}\")\n    result = x + y\n    print(f\"Result: {result}\")\n    print(f\"Calculation complete!\")\n    return result",
+  "params": {
+    "x": 12,
+    "y": 8
+  }
+}

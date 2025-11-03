@@ -30,6 +30,8 @@ def handler(context, event):
         try:
             if isinstance(event.body, bytes):
                 data = json.loads(event.body.decode('utf-8'))
+            elif isinstance(event.body, dict):
+                data = event.body
             else:
                 data = json.loads(event.body)
         except (json.JSONDecodeError, UnicodeDecodeError, AttributeError) as e:

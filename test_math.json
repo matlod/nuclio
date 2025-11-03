@@ -1,0 +1,7 @@
+{
+  "function": "def add_numbers(a, b): return a + b",
+  "params": {
+    "a": 15,
+    "b": 30
+  }
+}

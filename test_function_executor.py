@@ -426,11 +426,15 @@ def main():
     # Test connectivity first
     try:
         response = tester.session.get(tester.base_url, timeout=5)
-        print("❌ Function executor returned unexpected response. Make sure it's running on port 8082.")
-        return
+        # Function executor returns 400 error for GET requests - that's expected
+        if response.status_code == 400:
+            pass  # Expected behavior
+        else:
+            print(f"❌ Function executor returned unexpected response: {response.status_code}")
+            return
     except requests.exceptions.ConnectionError:
-        # This is expected - the function executor only accepts POST requests
-        pass
+        print("❌ Cannot connect to function executor. Make sure port-forward is running on port 8082.")
+        return
 
     # Run the test suite
     tester.run_all_tests()

@@ -1,0 +1,4 @@
+{
+  "function": "def test(): return \"It works!\"",
+  "params": {}
+}
